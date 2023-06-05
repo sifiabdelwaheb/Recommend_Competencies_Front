@@ -1,0 +1,81 @@
+.department_card_button {
+    color: #213360;
+    background-color: white;
+    border: 2px solid #213360;
+    font-weight: bold;
+    height: 50px;
+    border-radius: 30px;
+    width: 150px;
+    font-family: "Roboto-Bold";
+    margin: 5%;
+  }
+  .department_card_button:hover {
+    color: #fff;
+    background-color: #213360;
+    border: 2px solid #213360;
+  }
+  .realisation_card_button {
+    color: #72d9ce;
+    background-color: white;
+    border: 2px solid #72d9ce;
+    font-weight: bold;
+    height: 50px;
+    border-radius: 30px;
+    width: 150px;
+    font-family: "Roboto-Bold";
+    margin: 5%;
+  }
+  .realisation_card_button:hover {
+    color: #fff;
+    background-color: #213360;
+  }
+  .about_service_button {
+    background-color: #fff;
+    font-family: Roboto-Bold, sans-serif;
+    font-weight: bold;
+    border-color: #213360;
+    width: 150px;
+    height: 50px;
+    border-radius: 30px;
+    font-size: 15px;
+    color: #213360;
+    border: 2px solid #213360;
+  }
+  
+  .abour_contact_button {
+    background-color: #72d9ce;
+    font-family: Roboto-Bold, sans-serif;
+    font-weight: bold;
+    border-color: #72d9ce;
+  
+    height: 50px;
+    width: 150px;
+    border-radius: 30px;
+    font-size: 15px;
+    color: #fff;
+  }
+  
+  .abour_contact_button:hover {
+    color: #fff;
+    background-color: #213360;
+    border: 2px solid #213360;
+  }
+  
+  .cart_product_button {
+    background-color: #72d9ce;
+    font-family: Roboto-Bold, sans-serif;
+    font-weight: bold;
+    border-color: #72d9ce;
+    width: 190px;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 15px;
+    color: #fff;
+  }
+  
+  .cart_product_button {
+    color: #fff;
+    background-color: #213360;
+    border: 2px solid #213360;
+  }
+  

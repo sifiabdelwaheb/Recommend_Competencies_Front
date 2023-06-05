@@ -1,14 +1,17 @@
-import { combineReducers } from 'redux'
-import settings from './settings/reducer'
-import { reducer as auth } from './auth/authUserRedux'
-import { reducer as contactUs } from './auth/contactUsRedux'
-import menu from './menu/reducer'
-import { reducer as addUser } from './users/addUserRedux'
-import { reducer as editUser } from './users/editUserRedux'
-import { reducer as deleteUser } from './users/deleteUserRedux'
-import { reducer as allUsers } from './users/getAllUsersRedux'
-import { reducer as annotateText } from './annotator/annotatorText'
-import {reducer as recommender} from "./recommender/recommender"
+import { combineReducers } from "redux";
+import settings from "./settings/reducer";
+import { reducer as auth } from "./auth/authUserRedux";
+import { reducer as contactUs } from "./auth/contactUsRedux";
+import menu from "./menu/reducer";
+import { reducer as addUser } from "./users/addUserRedux";
+import { reducer as editUser } from "./users/editUserRedux";
+import { reducer as deleteUser } from "./users/deleteUserRedux";
+import { reducer as allUsers } from "./users/getAllUsersRedux";
+import { reducer as annotateText } from "./annotator/annotatorText";
+import { reducer as recommender } from "./recommender/recommender";
+import cart from "./cart/reducer";
+import test from "./Test/reducer";
+
 const reducers = combineReducers({
   settings,
   allUsers,
@@ -20,7 +23,9 @@ const reducers = combineReducers({
   addUser,
   editUser,
   annotateText,
-  recommender
-})
+  recommender,
+  cart,
+  test,
+});
 
-export default reducers
+export default reducers;

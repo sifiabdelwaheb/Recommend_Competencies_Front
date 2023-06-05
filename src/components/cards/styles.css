@@ -1,0 +1,284 @@
+@font-face {
+    font-family: "Montserrat-Light";
+    src: local("Montserrat-Light"),
+      url("../../assets/Montserrat-Light.ttf") format("opentype");
+  }
+  @font-face {
+    font-family: "Montserrat-Bold";
+    src: local("Montserrat-Bold"),
+      url("../../assets/Montserrat-Bold.ttf") format("opentype");
+  }
+  @font-face {
+    font-family: "Roboto-Bold";
+    src: local("Roboto-Bold"),
+      url("../../assets/Roboto-Bold.ttf") format("opentype");
+  }
+  @font-face {
+    font-family: "Roboto-Light";
+    src: local("Roboto-Light"),
+      url("../../assets/Roboto-Light.ttf") format("opentype");
+  }
+  
+  @font-face {
+    font-family: "DIN2014-Bold";
+    src: local("DIN2014-Bold"),
+      url("../../assets/DIN2014-Bold.ttf") format("opentype");
+  }
+  
+  @font-face {
+    font-family: "Quicksand-VariableFont_wght";
+    src: local("Quicksand-VariableFont_wght"),
+      url("../../assets/Quicksand-VariableFont_wght.ttf") format("opentype");
+  }
+  .Container_Contact {
+    margin-top: -16%;
+    font-weight: bold;
+    font-size: 18px;
+    width: 100%;
+  }
+  
+  .dialysis_hidden_image {
+    height: 500px;
+    width: 100%;
+    padding-left: 2%;
+    display: flex;
+    background-image: url("../../assets/images/dark_capture.png");
+    color: red;
+    margin-top: 16%;
+  
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background-color: #031a33;
+  }
+  
+  .About_title {
+    color: #fff;
+    font-family: DIN2014-Bold, sans-serif;
+    font-size: 63px;
+    margin-left: 2%;
+  }
+  
+  .department_description {
+    font-family: Montserrat-Light, sans-serif;
+    font-size: 22px;
+    color: #fff;
+    max-width: 600px;
+    text-align: justify;
+    padding-left: 2%;
+  }
+  
+  .department_dialysis_product_description {
+    font-family: Montserrat-Light, sans-serif;
+    font-size: 22px;
+    color: #000;
+    max-width: 600px;
+    text-align: justify;
+    padding-left: 2%;
+  }
+  .department_dialysis_card {
+    min-width: 320px;
+  }
+  .department_dialysis_product_title {
+    font-family: Quicksand-VariableFont_wght, sans-serif;
+    font-size: 22px;
+    color: #0e204d;
+    max-width: 600px;
+    text-align: justify;
+    font-weight: bold;
+  }
+  .department_card_button {
+    color: #213360;
+    background-color: white;
+    border: 2px solid #213360;
+    font-weight: bold;
+    height: 50px;
+    border-radius: 30px;
+    width: 150px;
+    font-family: "Roboto-Bold";
+    margin: 5%;
+  }
+  .department_card_button:hover {
+    color: #fff;
+    background-color: #72d9ce;
+    border: 2px solid #72d9ce;
+  }
+  
+  .department_button {
+    color: #213360;
+    background-color: white;
+    border: 2px solid #213360;
+    font-weight: bold;
+    height: 45px;
+    border-radius: 30px;
+    max-width: 100%;
+    font-family: "Roboto-Bold";
+  }
+  .department_button:hover {
+    color: #fff;
+    background-color: #72d9ce;
+    border: 2px solid #72d9ce;
+  }
+  
+  .dialysis_machine_images_hidden {
+    height: 400px;
+    width: 715px;
+    min-width: 320px;
+    max-width: 100%;
+    background-color: #000;
+  }
+  .dialysis_images_hidden {
+    width: 70%;
+  }
+  
+  .realisation_machine_images_hidden {
+    height: 95%;
+    width: 95%;
+    max-width: 100%;
+  }
+  .realisation_machine_images_hidden:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .event_card_description {
+    font-family: Montserrat-Light, sans-serif;
+    font-size: 19px;
+    color: #484c53;
+    max-width: 600px;
+    text-align: justify;
+    margin-top: 2%;
+  
+    padding-left: 5%;
+  }
+  .dialysis_machine_product_description {
+    font-family: "Roboto-Bold";
+    font-size: 14px;
+    color: #283b6a;
+    max-width: 600px;
+    text-align: justify;
+    margin-top: 2%;
+  
+    padding-left: 5%;
+  }
+  
+  .dialysis_machine_product_title {
+    font-family: "Roboto-Bold";
+  
+    font-size: 24px;
+    color: #0e204d;
+    max-width: 600px;
+    text-align: justify;
+    font-weight: bold;
+    padding: 5%;
+  }
+  .event_title {
+    font-family: Montserrat-Bold, sans-serif;
+    font-size: 24px;
+    color: #0e204d;
+    max-width: 600px;
+    text-align: justify;
+    font-weight: bold;
+    padding-left: 5%;
+  }
+  
+  .event_date {
+    font-family: Montserrat-Bold, sans-serif;
+    font-size: 18px;
+    color: #c1c1c1;
+  
+    text-align: justify;
+    font-weight: bold;
+    padding-left: 5%;
+    padding-top: 5%;
+  }
+  .event_card_location {
+    font-family: Montserrat-Bold, sans-serif;
+    font-size: 18px;
+    color: #0e0e0e;
+  
+    text-align: justify;
+    font-weight: bold;
+    padding-left: 5%;
+    padding-top: 1%;
+  }
+  
+  .realisation_project_title {
+    font-family: "Roboto-Bold";
+    font-size: 24px;
+    color: #0033a0;
+    max-width: 600px;
+    text-align: justify;
+    font-weight: bold;
+    padding-left: 5%;
+  }
+  
+  .realisation_component {
+    margin-top: -15%;
+    padding-left: 5%;
+    padding-top: 2%;
+    padding-right: 5%;
+    margin-left: 5%;
+    background-color: #fff;
+    position: relative;
+    z-index: 2;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 5px;
+  }
+  @media only screen and (max-width: 600px) {
+    .realisation_component {
+      width: 90%;
+    }
+  }
+  
+  .department_card_style {
+    -webkit-box-shadow: 0 5px 83px 0 rgba(9, 29, 62, 0.05);
+    box-shadow: 0 5px 83px 0 rgba(9, 29, 62, 0.05);
+    border-radius: 100px;
+  }
+  
+  .department_card_title {
+    color: #0e204d;
+    font-family: Quicksand, sans-serif;
+    text-transform: capitalize;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .department_card_description {
+    color: #213360;
+    font-family: Roboto, sans-serif;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 15px;
+  }
+  
+  .department_card_check {
+    color: #213360;
+    font-family: Roboto, sans-serif;
+    text-transform: capitalize;
+    font-weight: 800;
+    font-size: 15px;
+    margin-left: 4px;
+  }
+  .realisation_view {
+    font-family: Montserrat-Bold, sans-serif;
+    font-size: 16px;
+    color: #72d9ce;
+    padding-left: 1%;
+    cursor: pointer;
+  }
+  .product_card_details {
+    width: 100%;
+  }
+  
+  @media only screen and (max-width: 900px) {
+    .product_card_details {
+      min-width: 400px;
+    }
+  }
+  

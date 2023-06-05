@@ -8,7 +8,9 @@ import TextField from "@mui/material/TextField";
 import RecommenderActions from "./redux/recommender/recommender";
 import { Row, Col } from "reactstrap";
 import { Spinner } from "reactstrap";
-
+import { Link } from "react-router-dom";
+import { addToCart } from "./redux/cart/actions";
+import { AddTest } from "./redux/Test/actions";
 import "./App.css";
 import Select from "react-select";
 import { Table } from "reactstrap";
@@ -67,6 +69,14 @@ export default function RecommnderCard({ children }) {
     dispatch(RecommenderActions.RecommenderRequest({ job }));
   };
 
+  const handleAddTest = (name) => {
+    dispatch(
+      AddTest({
+        skills: name,
+      })
+    );
+  };
+
   const TEXT =
     "Recently completed a diploma in Digital Marketing from ABC College. 5 years of experience as a full-stack web developer, working on a variety of projects for clients in the healthcare, finance, and education industries. Proficient in developing web applications using ReactJS, Node.js, and MongoDB";
 
@@ -81,6 +91,7 @@ export default function RecommnderCard({ children }) {
   const handleTagChange = (e) => {
     setTag(e.target.value);
   };
+
   const delete_ = (start) => {
     const n_state = state.filter((val) => val.start !== start);
     setState(n_state);
@@ -112,9 +123,20 @@ export default function RecommnderCard({ children }) {
     //setData(redux.search.response.data.asMutable({ deep: true }))
   };
   return (
-    <div style={{ paddingLeft: "5%", paddingRight: "5%", marginTop: "100px" }}>
-      <div className=" flex flex-col  m-10  shadow-md rounded-md">
-        <div className="bg-indigo-100 px-4 py-6 flex flex-row  space-x-2 rounded-t-md ">
+    <div
+      style={{
+        width: "100%",
+        paddingLeft: "5%",
+        paddingRight: "5%",
+        marginTop: "100px",
+        backgroundColor: "#f5f5f5",
+      }}
+    >
+      <div className=" flex flex-col  m-10  shadow-md">
+        <div
+          className=" px-4 py-6 flex flex-row  space-x-2  "
+          style={{ display: "flex", justifyContent: "space-around" }}
+        >
           <Select
             value={job}
             onChange={onchangeSelectJobs}
@@ -126,16 +148,14 @@ export default function RecommnderCard({ children }) {
           />
           <Button
             style={{
-              maxWidth: "200px",
               borderRadius: "22px",
               minWidth: "200px",
               maxHeight: "50px",
-              marginLeft: "10%",
             }}
             variant="contained"
             onClick={() => handleKeyDown()}
           >
-            Prédiction
+            Rechercher
           </Button>
         </div>
         {clicked & !redux.recommender.loaded ? (
@@ -144,14 +164,14 @@ export default function RecommnderCard({ children }) {
           ""
         )}
 
-        {clicked & redux.recommender.loaded ? (
+        {redux.recommender.loaded ? (
           <div>
             <hr />
             <div
               style={{
                 display: "flex",
                 flexDirection: "row",
-                maxWidth: "80%",
+                maxWidth: "100%",
                 paddingTop: "5%",
                 paddingLeft: "2%",
                 paddingBottom: "1%",
@@ -165,17 +185,28 @@ export default function RecommnderCard({ children }) {
                   fontSize: "18px",
                 }}
               >
-                Skills Name
+                Nom de la compétence
               </Col>
               <Col
                 style={{
                   marginLeft: "200px",
+                  fontWeight: "bold",
+                  fontSize: "18px",
+                  minWidth: "600px",
+                  minWidth: "600px",
+                }}
+              >
+                Lien de la formation
+              </Col>
+              <Col
+                style={{
                   width: "200px",
                   fontWeight: "bold",
                   fontSize: "18px",
+                  marginLeft: "80px",
                 }}
               >
-                Formation link
+                Test de compétences
               </Col>
             </div>
             <hr />
@@ -194,12 +225,35 @@ export default function RecommnderCard({ children }) {
                 <Col style={{ marginLeft: "3.2%", width: "200px" }}>
                   <h2>{product.name}</h2>
                 </Col>
-                <Col style={{ marginLeft: "200px" }}>
+                <Col
+                  style={{
+                    marginLeft: "200px",
+                    minWidth: "600px",
+                    maxWidth: "600px",
+                  }}
+                >
                   {" "}
                   <a href={product.link} target="_blank">
                     {" "}
                     {product.link}{" "}
                   </a>{" "}
+                </Col>
+                <Col style={{ marginLeft: "100px", width: "200px" }}>
+                  {" "}
+                  <Link to={"/test/" + product.name.toLowerCase()}>
+                    <Button
+                      style={{
+                        borderRadius: "22px",
+                       
+                        maxHeight: "50px",
+                        maxWidth:"120px"
+                      }}
+                      variant="contained"
+                      onClick={() => handleAddTest(product.name.toLowerCase())}
+                    >
+                      Test
+                    </Button>
+                  </Link>
                 </Col>
               </div>
             ))}
