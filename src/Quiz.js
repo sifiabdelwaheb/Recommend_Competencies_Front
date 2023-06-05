@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import "./quiz.css";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 const Quiz = ({ data }) => {
   const redux = useSelector((state) => state);
   const [activeQuestion, setActiveQuestion] = useState(0);
@@ -136,7 +137,7 @@ const Quiz = ({ data }) => {
             </div>
           </div>
         ) : (
-          <div className="result">
+          <div className="result" style={{ minWidth: "600px" }}>
             <h3>Result</h3>
             <p>
               Total Question: <span>{questions.length}</span>
@@ -152,8 +153,32 @@ const Quiz = ({ data }) => {
             </p>
 
             {correctAnswers >= 2 ? (
-              <div style={{ marginTop: "5%" }}>
-                Bon travail ! Vous avez réussi le test en ligne.
+              <div>
+                <div style={{ marginTop: "5%" }}>
+                  Bon travail ! Vous avez réussi le test en ligne. Revenez à la
+                  page de formation et explorez les autres tests disponibles
+                  <div style={{ marginTop: "5%" }}>
+                    <Link to={"/"}>
+                      <Button
+                        style={{
+                          borderRadius: "22px",
+                          maxHeight: "60px",
+                          marginTop: "-10px",
+                        }}
+                        variant="contained"
+                      >
+                        Retour
+                        <ArrowBackIosIcon
+                          sx={{
+                            color: "#fff",
+                            fontSize: 25,
+                            marginLeft: "20px",
+                          }}
+                        />
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
               </div>
             ) : (
               <div style={{ marginTop: "5%" }}>
